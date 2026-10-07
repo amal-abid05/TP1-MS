@@ -399,14 +399,3 @@ TP1
 
 **À retenir :** couplage faible (dépendre d'interfaces) → injection de dépendances (recevoir sa dépendance de l'extérieur) → inversion de contrôle (un conteneur crée et assemble les objets).
 
-## Erreurs fréquentes
-
-| Symptôme | Cause probable | Solution |
-| --- | --- | --- |
-| `NullPointerException` dans `calcul()` | `setDao()` jamais appelé | Injecter le DAO avant `calcul()` |
-| `NullPointerException` à `br.readLine()` | `config.txt` introuvable | Le placer dans `src/main/resources` (Resources Root), refaire *Build → Rebuild* |
-| `ClassNotFoundException` | Nom incorrect dans `config.txt` | Vérifier `dao.DaoIMP` (package + casse) |
-| `FileNotFoundException: class path resource [config.xml]` | `config.xml` mal placé | Le mettre dans `resources` |
-| `NoSuchBeanDefinitionException` | Annotations absentes ou package non scanné | Vérifier `@Repository`/`@Service` et les packages du scan |
-| `package org.springframework... does not exist` | Dépendances Maven non chargées | *Reload All Maven Projects* |
-| Erreur de version Java | JDK du projet ≠ 17 | *File → Project Structure* : SDK 17 et Language level 17 |
