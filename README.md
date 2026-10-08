@@ -1,4 +1,4 @@
-# Correction détaillée du TP1 : Inversion de Contrôle et Injection de Dépendances
+# TP1 : Inversion de Contrôle et Injection de Dépendances
 
 **Matière :** Architecture MicroServices, MPSRCC1 · **Outils :** JDK 17, IntelliJ IDEA, Maven, Spring
 
